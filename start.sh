@@ -1,7 +1,7 @@
 #!/bin/bash
 export IP_ADDR=$(hostname -f)
 yum update -y
-yum install java-1.8.0-openjdk-devel -y
+yum install java-17-amazon-corretto-devel -y
 yum install git -y
 wget https://mirrors.estointernet.in/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
 tar -xvf apache-maven-3.6.3-bin.tar.gz

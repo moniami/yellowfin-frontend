@@ -8,8 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class AboutController {
     @GetMapping("/about")
-    public String about(@RequestParam(name = "name", defaultValue = "About Us") String param, Model model) {
-        model.addAttribute("name",param);
+    public String about() {
         return "about";
     }
 
