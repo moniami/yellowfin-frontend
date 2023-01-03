@@ -25,7 +25,7 @@ public class MapController {
 			prop.load(propsInput);
 			String BACKEND_URL;
 			BACKEND_URL = prop.getProperty("BACKEND_URL");
-			URL url = new URL("http://"+BACKEND_URL +":8081/currentUser");
+			URL url = new URL("http://internal-yellowfin-backend-lb-1198993164.eu-west-3.elb.amazonaws.com:8080/currentUser");
 			try {
 				HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 				conn.setRequestMethod("GET");
