@@ -23,10 +23,9 @@ public class MapController {
 			FileInputStream propsInput = new FileInputStream(configFilePath);
 			Properties prop = new Properties();
 			prop.load(propsInput);
-
 			String BACKEND_URL;
 			BACKEND_URL = prop.getProperty("BACKEND_URL");
-			URL url = new URL("http://"+BACKEND_URL +":8080/currentUser");
+			URL url = new URL("http://"+BACKEND_URL +":8081/currentUser");
 			try {
 				HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 				conn.setRequestMethod("GET");
